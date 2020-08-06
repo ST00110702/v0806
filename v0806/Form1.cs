@@ -12,7 +12,7 @@ namespace v0806
 {
     public partial class Form1 : Form
     {
-        int vy = -10;
+        int vy = -20;
         int vx = -10;
         string kao = "(x _ x)";
 
@@ -29,19 +29,19 @@ namespace v0806
           
           if(label1.Left < 0)
           {
-              vx = 10;
+              vx = Math.Abs(vx);
           }  
           if(label1.Top < 0)
           {
-              vy = 10;
+              vy = Math.Abs(vy);
           }
-          if(label1.Right <284);
+          if(label1.Right > ClientSize.Width)
           {
-              vx = -274;
+              vx = -Math.Abs(vx);
           }
-          if (label1.Bottom < 261) ;
+          if (label1.Bottom > ClientSize.Height)
           {
-              vy = 251;
+              vy = -Math.Abs(vy);
           }
 
           string t =label1.Text;
@@ -57,8 +57,8 @@ namespace v0806
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("幅" + ClientSize.Width);
-            MessageBox.Show("高さ" + ClientSize.Height);
+            //MessageBox.Show("幅" + ClientSize.Width);
+            //MessageBox.Show("高さ" + ClientSize.Height);
 
         }
     }

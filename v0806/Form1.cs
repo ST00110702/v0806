@@ -16,5 +16,18 @@ namespace v0806
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+          label1.Left = vx;
+          label1.Top = vy;
+        }
+        int vy = -10;
+        int vx = -10;
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

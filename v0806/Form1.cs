@@ -29,19 +29,19 @@ namespace v0806
           
           if(label1.Left < 0)
           {
-              vx = Math.Abs(vx);
+              vx = Math.Abs(vx)*11/10;
           }  
           if(label1.Top < 0)
           {
-              vy = Math.Abs(vy);
+              vy = Math.Abs(vy)*11/10;
           }
           if(label1.Right > ClientSize.Width)
           {
-              vx = -Math.Abs(vx);
+              vx = -Math.Abs(vx)*11/10;
           }
           if (label1.Bottom > ClientSize.Height)
           {
-              vy = -Math.Abs(vy);
+              vy = -Math.Abs(vy)*11/10;
           }
 
           string t =label1.Text;
